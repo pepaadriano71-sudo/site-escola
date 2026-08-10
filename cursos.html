@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola Conhecimento - Educação de qualidade, inclusão e inovação.">
+    <title>Cursos e Turmas | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+
+    <section class="section" aria-labelledby="cursos-titulo">
+        <div class="container">
+            <h2 id="cursos-titulo" class="section-title">Cursos e Turmas</h2>
+            <p class="section-subtitle">Conheça nossas turmas e encontre a ideal para você.</p>
+
+            <div class="filtros" role="group" aria-label="Filtrar cursos por categoria">
+                <button class="filtro-btn filtro-curso ativo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn filtro-curso" data-filtro="fundamental">Ensino Fundamental</button>
+                <button class="filtro-btn filtro-curso" data-filtro="medio">Ensino Médio</button>
+                <button class="filtro-btn filtro-curso" data-filtro="eja">EJA</button>
+            </div>
+
+            <div class="cards-grid">
+                <article class="card curso-card" data-categoria="fundamental">
+                    <div class="card-icon" aria-hidden="true">6️⃣</div>
+                    <h3 class="card-title">6º Ano</h3>
+                    <p class="card-text">Início do ciclo do Ensino Fundamental II, com foco em transição pedagógica e desenvolvimento de autonomia.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="fundamental">
+                    <div class="card-icon" aria-hidden="true">7️⃣</div>
+                    <h3 class="card-title">7º Ano</h3>
+                    <p class="card-text">Consolidação de conteúdos e desenvolvimento de habilidades de raciocínio lógico e crítico.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="fundamental">
+                    <div class="card-icon" aria-hidden="true">8️⃣</div>
+                    <h3 class="card-title">8º Ano</h3>
+                    <p class="card-text">Preparação para o encerramento do ciclo fundamental, com projetos interdisciplinares.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="fundamental">
+                    <div class="card-icon" aria-hidden="true">9️⃣</div>
+                    <h3 class="card-title">9º Ano</h3>
+                    <p class="card-text">Ano de conclusão do Ensino Fundamental, com preparação para transição ao Ensino Médio.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="medio">
+                    <div class="card-icon" aria-hidden="true">1️⃣</div>
+                    <h3 class="card-title">1º Ano do Ensino Médio</h3>
+                    <p class="card-text">Início da formação para o vestibular e ENEM, com base sólida em todas as disciplinas.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="medio">
+                    <div class="card-icon" aria-hidden="true">2️⃣</div>
+                    <h3 class="card-title">2º Ano do Ensino Médio</h3>
+                    <p class="card-text">Aprofundamento dos conteúdos e início da orientação vocacional para escolha de carreira.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="medio">
+                    <div class="card-icon" aria-hidden="true">3️⃣</div>
+                    <h3 class="card-title">3º Ano do Ensino Médio</h3>
+                    <p class="card-text">Ano de conclusão com intensivo preparatório para ENEM e vestibulares.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="eja">
+                    <div class="card-icon" aria-hidden="true">📖</div>
+                    <h3 class="card-title">EJA - Fundamental</h3>
+                    <p class="card-text">Educação de Jovens e Adultos para conclusão do Ensino Fundamental, com horários flexíveis.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+                <article class="card curso-card" data-categoria="eja">
+                    <div class="card-icon" aria-hidden="true">🎓</div>
+                    <h3 class="card-title">EJA - Médio</h3>
+                    <p class="card-text">Educação de Jovens e Adultos para conclusão do Ensino Médio, reconhecido pelo MEC.</p>
+                    <button class="btn btn-primary btn-small">Ver informações →</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Escola Conhecimento</h4>
+                <p>Rua da Escola, 123<br>Centro - CEP 00000-000</p>
+                <p>Telefone: (00) 1234-5678</p>
+                <p>E-mail: contato@escola.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="escola.html">Sobre a Escola</a></li>
+                    <li><a href="cursos.html">Cursos e Turmas</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta<br>07h às 17h</p>
+                <div class="footer-social" aria-label="Redes sociais">
+                    <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+                    <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                    <a href="#" aria-label="YouTube"><span aria-hidden="true">▶️</span></a>
+                    <a href="#" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Escola Conhecimento. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

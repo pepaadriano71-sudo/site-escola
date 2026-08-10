@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola Conhecimento - Educação de qualidade, inclusão e inovação.">
+    <title>Contato | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+            <a href="portal.html" class="nav-link portal">🚪 Portal Escolar</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+
+    <section class="section" aria-labelledby="contato-titulo">
+        <div class="container">
+            <h2 id="contato-titulo" class="section-title">Fale Conosco</h2>
+            <p class="section-subtitle">Entre em contato conosco. Teremos prazer em atendê-lo.</p>
+
+            <div class="contato-grid">
+                <div aria-labelledby="info-titulo">
+                    <h3 id="info-titulo" style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Informações</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">📍</div>
+                        <div><h4>Endereço</h4><p>Rua da Escola, 123<br>Centro - CEP 00000-000</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">📞</div>
+                        <div><h4>Telefone</h4><p>(00) 1234-5678</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">✉️</div>
+                        <div><h4>E-mail</h4><p>contato@escola.com</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">🕐</div>
+                        <div><h4>Horário de Atendimento</h4><p>Segunda a Sexta<br>07h às 17h</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon" aria-hidden="true">🗺️</div>
+                        <div>
+                            <h4>Mapa</h4>
+                            <div style="background: var(--cinza-100); border-radius: var(--raio); height: 200px; display: flex; align-items: center; justify-content: center; color: var(--cinza-500); margin-top: 0.5rem;">🗺️ Mapa da localização</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div aria-labelledby="form-titulo">
+                    <h3 id="form-titulo" style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Envie uma mensagem</h3>
+
+                    <div class="mensagem-sucesso" id="mensagem-sucesso" role="alert">
+                        ✅ Mensagem enviada com sucesso! Em breve entraremos em contato.
+                    </div>
+
+                    <form id="form-contato" novalidate>
+                        <div class="form-group">
+                            <label for="nome">Nome completo <span aria-label="obrigatório">*</span></label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" aria-required="true">
+                            <span class="erro-msg">Por favor, preencha seu nome.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail <span aria-label="obrigatório">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" aria-required="true">
+                            <span class="erro-msg">Por favor, insira um e-mail válido.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto <span aria-label="obrigatório">*</span></label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto" aria-required="true">
+                            <span class="erro-msg">Por favor, preencha o assunto.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem <span aria-label="obrigatório">*</span></label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." aria-required="true"></textarea>
+                            <span class="erro-msg">Por favor, escreva sua mensagem.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensagem →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Escola Conhecimento</h4>
+                <p>Rua da Escola, 123<br>Centro - CEP 00000-000</p>
+                <p>Telefone: (00) 1234-5678</p>
+                <p>E-mail: contato@escola.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="escola.html">Sobre a Escola</a></li>
+                    <li><a href="cursos.html">Cursos e Turmas</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="portal.html">Portal Escolar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta<br>07h às 17h</p>
+                <div class="footer-social" aria-label="Redes sociais">
+                    <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+                    <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                    <a href="#" aria-label="YouTube"><span aria-hidden="true">▶️</span></a>
+                    <a href="#" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Escola Conhecimento. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+            <a href="portal.html" class="nav-link portal">🚪 Portal Escolar</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+<div class="portal-layout">
+    <aside class="sidebar" aria-label="Menu do aluno">
+        <div class="sidebar-header">
+            <h3>Área do Aluno</h3>
+            <div class="sidebar-user">
+                <div class="user-avatar">A</div>
+                <div class="user-info">
+                    <h4>Ana Silva</h4>
+                    <p>3º DS — Turma A</p>
+                </div>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" data-secao="dashboard-aluno" class="ativo"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#" data-secao="notas-aluno"><span class="icon">📝</span> Minhas Notas</a></li>
+            <li><a href="#" data-secao="frequencia-aluno"><span class="icon">📅</span> Frequência</a></li>
+            <li><a href="#" data-secao="atividades-aluno"><span class="icon">📋</span> Atividades</a></li>
+            <li><a href="#" data-secao="materiais-aluno"><span class="icon">📚</span> Materiais</a></li>
+            <li><a href="#" data-secao="avisos-aluno"><span class="icon">📢</span> Avisos</a></li>
+            <li><a href="#" data-secao="perfil-aluno"><span class="icon">👤</span> Perfil</a></li>
+            <li><a href="portal.html"><span class="icon">🚪</span> Sair</a></li>
+        </ul>
+    </aside>
+
+    <button class="sidebar-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <div class="portal-content">
+        <div class="container">
+
+            <!-- DASHBOARD -->
+            <div id="secao-dashboard-aluno" class="secao-portal">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Dashboard</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card"><div class="kpi-icon azul">📊</div><div class="kpi-info"><h4>8,2</h4><p>Média Geral</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon verde">📅</div><div class="kpi-info"><h4>93%</h4><p>Frequência</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon laranja">📋</div><div class="kpi-info"><h4>3</h4><p>Atividades Pendentes</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon vermelho">📝</div><div class="kpi-info"><h4>18/08</h4><p>Próxima Prova</p></div></div>
+                </div>
+                <div class="painel">
+                    <div class="painel-header"><h3>📅 Próximos Eventos</h3></div>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li style="padding: 0.75rem; background: var(--cinza-50); border-radius: var(--raio); border-left: 4px solid var(--azul-500);"><strong>20/08</strong> — Feira de Ciências</li>
+                        <li style="padding: 0.75rem; background: var(--cinza-50); border-radius: var(--raio); border-left: 4px solid var(--amarelo);"><strong>25/08</strong> — Olimpíada de Matemática</li>
+                        <li style="padding: 0.75rem; background: var(--cinza-50); border-radius: var(--raio); border-left: 4px solid var(--verde);"><strong>15/09</strong> — Avaliação Bimestral</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NOTAS -->
+            <div id="secao-notas-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Minhas Notas</h2>
+                <div class="painel" id="tabela-notas-aluno"></div>
+            </div>
+
+            <!-- FREQUÊNCIA -->
+            <div id="secao-frequencia-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Frequência</h2>
+                <div class="painel" id="frequencia-aluno"></div>
+            </div>
+
+            <!-- ATIVIDADES -->
+            <div id="secao-atividades-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Atividades</h2>
+                <div class="painel" id="atividades-aluno"></div>
+            </div>
+
+            <!-- MATERIAIS -->
+            <div id="secao-materiais-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Materiais</h2>
+                <div class="painel" id="materiais-aluno"></div>
+            </div>
+
+            <!-- AVISOS -->
+            <div id="secao-avisos-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Avisos</h2>
+                <div class="painel" id="avisos-aluno"></div>
+            </div>
+
+            <!-- PERFIL -->
+            <div id="secao-perfil-aluno" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Perfil</h2>
+                <div class="painel">
+                    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--azul-500), var(--azul-400)); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700;">A</div>
+                        <div>
+                            <h3 style="color: var(--azul-900); font-size: 1.3rem;">Ana Silva</h3>
+                            <p style="color: var(--cinza-500);">3º DS — Turma A • Desenvolvimento de Sistemas</p>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div><strong>Matrícula:</strong> 2023001</div>
+                        <div><strong>Data de Nascimento:</strong> 15/03/2008</div>
+                        <div><strong>E-mail:</strong> ana.silva@escola.com</div>
+                        <div><strong>Telefone:</strong> (00) 98765-4321</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

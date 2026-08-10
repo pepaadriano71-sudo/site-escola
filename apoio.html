@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escola Conhecimento - Educação de qualidade, inclusão e inovação.">
+    <title>Apoio ao Ensino | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+            <a href="portal.html" class="nav-link portal">🚪 Portal Escolar</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+
+    <section class="section" aria-labelledby="apoio-titulo">
+        <div class="container">
+            <h2 id="apoio-titulo" class="section-title">Ferramentas de Apoio ao Ensino</h2>
+            <p class="section-subtitle">Recursos e ferramentas para auxiliar no aprendizado dos nossos alunos.</p>
+
+            <article class="ferramenta-card" aria-labelledby="bib-titulo">
+                <h3 id="bib-titulo">📚 Biblioteca Digital</h3>
+                <p>Acesse nossa coleção de livros digitais, e-books e materiais de leitura recomendados para cada série.</p>
+                <ul class="lista-downloads" style="margin-top: 1rem;">
+                    <li><span>📖 Literatura Brasileira - Vol. 1</span><a href="#" class="download-link">Baixar PDF ↓</a></li>
+                    <li><span>📖 Matemática Fundamental - Guia de Estudos</span><a href="#" class="download-link">Baixar PDF ↓</a></li>
+                    <li><span>📖 Ciências - Atlas Ilustrado</span><a href="#" class="download-link">Baixar PDF ↓</a></li>
+                    <li><span>📖 História do Brasil - Resumo</span><a href="#" class="download-link">Baixar PDF ↓</a></li>
+                </ul>
+            </article>
+
+            <article class="ferramenta-card" aria-labelledby="mat-titulo">
+                <h3 id="mat-titulo">📥 Materiais para Download</h3>
+                <p>Apostilas, listas de exercícios e materiais complementares organizados por disciplina.</p>
+                <ul class="lista-downloads" style="margin-top: 1rem;">
+                    <li><span>📝 Apostila de Matemática - 9º Ano</span><a href="#" class="download-link">Baixar ↓</a></li>
+                    <li><span>📝 Gramática Portuguesa - Completa</span><a href="#" class="download-link">Baixar ↓</a></li>
+                    <li><span>📝 Física - Resumo de Fórmulas</span><a href="#" class="download-link">Baixar ↓</a></li>
+                    <li><span>📝 Química - Tabela Periódica</span><a href="#" class="download-link">Baixar ↓</a></li>
+                </ul>
+            </article>
+
+            <article class="ferramenta-card" aria-labelledby="ex-titulo">
+                <h3 id="ex-titulo">✏️ Exercícios</h3>
+                <p>Listas de exercícios separadas por disciplina para praticar e fixar o conteúdo.</p>
+                <div class="cards-grid" style="margin-top: 1.5rem;">
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-icon" aria-hidden="true">➕</div>
+                        <h4 class="card-title">Matemática</h4>
+                        <p class="card-text">Equações, geometria, estatística e mais.</p>
+                        <button class="btn btn-primary btn-small">Ver exercícios →</button>
+                    </div>
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-icon" aria-hidden="true">📝</div>
+                        <h4 class="card-title">Português</h4>
+                        <p class="card-text">Gramática, redação, interpretação de texto.</p>
+                        <button class="btn btn-primary btn-small">Ver exercícios →</button>
+                    </div>
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-icon" aria-hidden="true">🧪</div>
+                        <h4 class="card-title">Ciências</h4>
+                        <p class="card-text">Biologia, física, química e astronomia.</p>
+                        <button class="btn btn-primary btn-small">Ver exercícios →</button>
+                    </div>
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-icon" aria-hidden="true">🌍</div>
+                        <h4 class="card-title">História e Geografia</h4>
+                        <p class="card-text">História do Brasil e do mundo, geografia física e humana.</p>
+                        <button class="btn btn-primary btn-small">Ver exercícios →</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="ferramenta-card" aria-labelledby="quiz-titulo">
+                <h3 id="quiz-titulo">🎯 Quiz Educativo</h3>
+                <p>Teste seus conhecimentos com perguntas interativas de diversas disciplinas.</p>
+                <div class="quiz-container" id="quiz-container" style="margin-top: 1.5rem;"></div>
+            </article>
+
+            <article class="ferramenta-card" aria-labelledby="vid-titulo">
+                <h3 id="vid-titulo">🎬 Vídeos Educativos</h3>
+                <p>Conteúdos em vídeo para complementar o aprendizado em sala de aula.</p>
+                <div class="cards-grid" style="margin-top: 1.5rem;">
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-image" style="height: 140px; font-size: 2rem;" role="img" aria-label="Vídeo sobre células">🔬</div>
+                        <h4 class="card-title">A Célula - Estrutura e Função</h4>
+                        <p class="card-text">Vídeo explicativo sobre a estrutura das células eucariotas e procariotas.</p>
+                        <button class="btn btn-primary btn-small">Assistir →</button>
+                    </div>
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-image" style="height: 140px; font-size: 2rem;" role="img" aria-label="Vídeo sobre revolução industrial">🏭</div>
+                        <h4 class="card-title">Revolução Industrial</h4>
+                        <p class="card-text">Contexto histórico e impactos da Revolução Industrial no mundo.</p>
+                        <button class="btn btn-primary btn-small">Assistir →</button>
+                    </div>
+                    <div class="card" style="padding: 1.5rem;">
+                        <div class="card-image" style="height: 140px; font-size: 2rem;" role="img" aria-label="Vídeo sobre funções matemáticas">📐</div>
+                        <h4 class="card-title">Funções do 2º Grau</h4>
+                        <p class="card-text">Explicação completa sobre funções quadráticas com exemplos resolvidos.</p>
+                        <button class="btn btn-primary btn-small">Assistir →</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="ferramenta-card" aria-labelledby="forum-titulo">
+                <h3 id="forum-titulo">💬 Fórum de Discussão</h3>
+                <p>Espaço para dúvidas, discussões e troca de ideias entre alunos e professores.</p>
+                <div style="margin-top: 1.5rem; background: var(--cinza-100); border-radius: var(--raio); padding: 1.5rem;">
+                    <div style="border-bottom: 1px solid var(--cinza-200); padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <h4 style="color: var(--azul-900); margin-bottom: 0.25rem;">📌 Dúvida sobre equação do 2º grau</h4>
+                        <p style="font-size: 0.85rem; color: var(--cinza-500);">Por João Silva • 2 respostas • 08/08/2026</p>
+                    </div>
+                    <div style="border-bottom: 1px solid var(--cinza-200); padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <h4 style="color: var(--azul-900); margin-bottom: 0.25rem;">📌 Dica de leitura para redação</h4>
+                        <p style="font-size: 0.85rem; color: var(--cinza-500);">Por Prof. Ana • 5 respostas • 05/08/2026</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--azul-900); margin-bottom: 0.25rem;">📌 Grupo de estudos - ENEM</h4>
+                        <p style="font-size: 0.85rem; color: var(--cinza-500);">Por Maria Oliveira • 12 respostas • 01/08/2026</p>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem;">Participar da discussão →</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Escola Conhecimento</h4>
+                <p>Rua da Escola, 123<br>Centro - CEP 00000-000</p>
+                <p>Telefone: (00) 1234-5678</p>
+                <p>E-mail: contato@escola.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="escola.html">Sobre a Escola</a></li>
+                    <li><a href="cursos.html">Cursos e Turmas</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="portal.html">Portal Escolar</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta<br>07h às 17h</p>
+                <div class="footer-social" aria-label="Redes sociais">
+                    <a href="#" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+                    <a href="#" aria-label="Instagram"><span aria-hidden="true">📷</span></a>
+                    <a href="#" aria-label="YouTube"><span aria-hidden="true">▶️</span></a>
+                    <a href="#" aria-label="WhatsApp"><span aria-hidden="true">💬</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Escola Conhecimento. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

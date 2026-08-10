@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+            <a href="portal.html" class="nav-link portal">🚪 Portal Escolar</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+<div class="portal-layout">
+    <aside class="sidebar" aria-label="Menu administrativo">
+        <div class="sidebar-header">
+            <h3>Administração</h3>
+            <div class="sidebar-user">
+                <div class="user-avatar">A</div>
+                <div class="user-info">
+                    <h4>Administrador</h4>
+                    <p>Escola Conhecimento</p>
+                </div>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" data-secao="dashboard-admin" class="ativo"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#" data-secao="alunos-admin"><span class="icon">👨‍🎓</span> Alunos</a></li>
+            <li><a href="#" data-secao="professores-admin"><span class="icon">👩‍🏫</span> Professores</a></li>
+            <li><a href="#" data-secao="turmas-admin"><span class="icon">🏫</span> Turmas</a></li>
+            <li><a href="#" data-secao="noticias-admin"><span class="icon">📰</span> Notícias</a></li>
+            <li><a href="#" data-secao="eventos-admin"><span class="icon">📅</span> Eventos</a></li>
+            <li><a href="#" data-secao="config-admin"><span class="icon">⚙️</span> Configurações</a></li>
+            <li><a href="portal.html"><span class="icon">🚪</span> Sair</a></li>
+        </ul>
+    </aside>
+
+    <button class="sidebar-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <div class="portal-content">
+        <div class="container" id="dashboard-admin">
+
+            <!-- DASHBOARD -->
+            <div id="secao-dashboard-admin" class="secao-portal">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Dashboard</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card"><div class="kpi-icon azul">👨‍🎓</div><div class="kpi-info"><h4>1.240</h4><p>Alunos Matriculados</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon verde">👩‍🏫</div><div class="kpi-info"><h4>80</h4><p>Professores</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon laranja">🏫</div><div class="kpi-info"><h4>9</h4><p>Turmas Ativas</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon vermelho">📚</div><div class="kpi-info"><h4>2</h4><p>Cursos Profissionalizantes</p></div></div>
+                </div>
+            </div>
+
+            <!-- ALUNOS -->
+            <div id="secao-alunos-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Alunos</h2>
+                <div class="painel" id="tabela-alunos-admin"></div>
+            </div>
+
+            <!-- PROFESSORES -->
+            <div id="secao-professores-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Professores</h2>
+                <div class="painel" id="tabela-professores-admin"></div>
+            </div>
+
+            <!-- TURMAS -->
+            <div id="secao-turmas-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Turmas</h2>
+                <div class="painel" id="turmas-admin"></div>
+            </div>
+
+            <!-- NOTÍCIAS -->
+            <div id="secao-noticias-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Publicar Notícia</h2>
+                <div class="painel">
+                    <form id="form-noticia-admin">
+                        <div class="form-group">
+                            <label for="noticia-titulo">Título *</label>
+                            <input type="text" id="noticia-titulo" placeholder="Título da notícia" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Categoria</label>
+                                <select>
+                                    <option>Notícia</option>
+                                    <option>Aviso</option>
+                                    <option>Evento</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Data</label>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="noticia-conteudo">Conteúdo *</label>
+                            <textarea id="noticia-conteudo" rows="5" placeholder="Escreva o conteúdo da notícia..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Publicar Notícia →</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- EVENTOS -->
+            <div id="secao-eventos-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Adicionar Evento</h2>
+                <div class="painel">
+                    <form id="form-evento-admin">
+                        <div class="form-group">
+                            <label for="evento-titulo">Título do Evento *</label>
+                            <input type="text" id="evento-titulo" placeholder="Ex: Feira de Ciências" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Data *</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Horário</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Local</label>
+                            <input type="text" placeholder="Ex: Auditório da escola">
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição</label>
+                            <textarea rows="3" placeholder="Descreva o evento..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Adicionar Evento →</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- CONFIGURAÇÕES -->
+            <div id="secao-config-admin" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Configurações</h2>
+                <div class="painel">
+                    <h3 style="margin-bottom: 1rem; color: var(--azul-900);">Informações da Escola</h3>
+                    <div class="form-row">
+                        <div class="form-group"><label>Nome da Escola</label><input type="text" value="Escola Conhecimento"></div>
+                        <div class="form-group"><label>Telefone</label><input type="text" value="(00) 1234-5678"></div>
+                    </div>
+                    <div class="form-group"><label>Endereço</label><input type="text" value="Rua da Escola, 123"></div>
+                    <div class="form-group"><label>E-mail</label><input type="email" value="contato@escola.com"></div>
+                    <button class="btn btn-primary">Salvar Alterações →</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

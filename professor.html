@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Professor | Escola Conhecimento</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+<header class="header" role="banner">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="Escola Conhecimento - Página inicial">
+            <div class="logo-icon" aria-hidden="true">📚</div>
+            <span>Escola Conhecimento</span>
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-principal">☰</button>
+        <nav class="nav" id="menu-principal" role="navigation" aria-label="Menu principal">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="escola.html" class="nav-link">Escola</a>
+            <a href="cursos.html" class="nav-link">Cursos</a>
+            <a href="noticias.html" class="nav-link">Notícias</a>
+            <a href="calendario.html" class="nav-link">Calendário</a>
+            <a href="apoio.html" class="nav-link">Apoio ao Ensino</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+            <a href="portal.html" class="nav-link portal">🚪 Portal Escolar</a>
+        </nav>
+    </div>
+</header>
+<main id="conteudo" class="main" role="main">
+<div class="portal-layout">
+    <aside class="sidebar" aria-label="Menu do professor">
+        <div class="sidebar-header">
+            <h3>Área do Professor</h3>
+            <div class="sidebar-user">
+                <div class="user-avatar">R</div>
+                <div class="user-info">
+                    <h4>Prof. Ricardo Almeida</h4>
+                    <p>Programação</p>
+                </div>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" data-secao="dashboard-professor" class="ativo"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="#" data-secao="turmas-professor"><span class="icon">👨‍🏫</span> Minhas Turmas</a></li>
+            <li><a href="#" data-secao="notas-professor"><span class="icon">📝</span> Notas</a></li>
+            <li><a href="#" data-secao="frequencia-professor"><span class="icon">📅</span> Frequência</a></li>
+            <li><a href="#" data-secao="atividades-professor"><span class="icon">📋</span> Atividades</a></li>
+            <li><a href="#" data-secao="materiais-professor"><span class="icon">📚</span> Materiais</a></li>
+            <li><a href="#" data-secao="avisos-professor"><span class="icon">📢</span> Avisos</a></li>
+            <li><a href="portal.html"><span class="icon">🚪</span> Sair</a></li>
+        </ul>
+    </aside>
+
+    <button class="sidebar-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <div class="portal-content">
+        <div class="container" id="dashboard-professor">
+
+            <!-- DASHBOARD -->
+            <div id="secao-dashboard-professor" class="secao-portal">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Dashboard</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card"><div class="kpi-icon azul">👨‍🏫</div><div class="kpi-info"><h4>2</h4><p>Turmas</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon verde">👨‍🎓</div><div class="kpi-info"><h4>50</h4><p>Alunos</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon laranja">📋</div><div class="kpi-info"><h4>5</h4><p>Atividades Pendentes</p></div></div>
+                    <div class="kpi-card"><div class="kpi-icon vermelho">📢</div><div class="kpi-info"><h4>3</h4><p>Avisos Ativos</p></div></div>
+                </div>
+            </div>
+
+            <!-- TURMAS -->
+            <div id="secao-turmas-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Minhas Turmas</h2>
+                <div id="turmas-professor"></div>
+            </div>
+
+            <!-- NOTAS -->
+            <div id="secao-notas-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Notas dos Alunos</h2>
+                <div class="painel" id="notas-professor"></div>
+            </div>
+
+            <!-- FREQUÊNCIA -->
+            <div id="secao-frequencia-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Frequência dos Alunos</h2>
+                <div class="painel" id="frequencia-professor"></div>
+            </div>
+
+            <!-- ATIVIDADES -->
+            <div id="secao-atividades-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Cadastrar Atividade</h2>
+                <div class="painel">
+                    <form id="form-atividade">
+                        <div class="form-row">
+                            <div class="form-group" style="flex: 2;">
+                                <label for="atv-titulo">Título da Atividade *</label>
+                                <input type="text" id="atv-titulo" placeholder="Ex: Trabalho de Programação" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="atv-disciplina">Disciplina *</label>
+                                <select id="atv-disciplina" required>
+                                    <option value="">Selecione</option>
+                                    <option>Programação</option>
+                                    <option>Matemática</option>
+                                    <option>Português</option>
+                                    <option>Marketing Digital</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="atv-turma">Turma *</label>
+                                <select id="atv-turma" required>
+                                    <option value="">Selecione</option>
+                                    <option>3º DS A</option>
+                                    <option>3º DS B</option>
+                                    <option>2º DS</option>
+                                    <option>2º Marketing</option>
+                                    <option>1º DS</option>
+                                    <option>1º Marketing</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="atv-entrega">Data de Entrega *</label>
+                                <input type="date" id="atv-entrega" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="atv-descricao">Descrição</label>
+                            <textarea id="atv-descricao" rows="3" placeholder="Descreva a atividade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar Atividade →</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- MATERIAIS -->
+            <div id="secao-materiais-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Materiais</h2>
+                <div class="painel">
+                    <p style="color: var(--cinza-500); margin-bottom: 1rem;">Envie materiais de apoio para suas turmas.</p>
+                    <div class="form-group">
+                        <label>Arquivo</label>
+                        <input type="file">
+                    </div>
+                    <div class="form-group">
+                        <label>Turma</label>
+                        <select>
+                            <option>3º DS A</option>
+                            <option>2º DS</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">Enviar Material →</button>
+                </div>
+            </div>
+
+            <!-- AVISOS -->
+            <div id="secao-avisos-professor" class="secao-portal" style="display: none;">
+                <h2 style="color: var(--azul-900); margin-bottom: 1.5rem; font-size: 1.5rem;">Criar Aviso</h2>
+                <div class="painel">
+                    <form id="form-aviso-prof">
+                        <div class="form-group">
+                            <label for="aviso-titulo">Título *</label>
+                            <input type="text" id="aviso-titulo" placeholder="Título do aviso" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aviso-mensagem">Mensagem *</label>
+                            <textarea id="aviso-mensagem" rows="4" placeholder="Escreva o aviso..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Turma</label>
+                            <select>
+                                <option>Todas as turmas</option>
+                                <option>3º DS A</option>
+                                <option>2º DS</option>
+                                <option>2º Marketing</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Publicar Aviso →</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
